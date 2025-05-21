@@ -267,3 +267,18 @@ body {
   font-weight: bold;
 }
 
+
+/* Faq */
+    .faq-item {
+      background: #66bb6a;
+      color: #fff;
+      padding: 18px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    .faq-question {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 8px;
+    }
