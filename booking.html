@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taniti Booking - Discover Taniti</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!--logo in header-->
+  <div class="navbar">
+    <div class="navbar-logo">
+      <img src="Images/Logo.png" alt="Discover Taniti Logo" class="logo-img">
+    </div>
+    <!--navbar-->
+    <div class="navbar-title">Discover Taniti</div>
+    <button class="navbar-toggle">More</button>
+    <div class="navbar-links">
+      <a href="index.html">Home</a>
+      <a href="attractions.html">Attractions</a>
+      <a href="activities.html">Activities</a>
+      <a href="accommodation.html">Accommodation</a>
+      <a href="transport.html">Transport</a>
+      <a href="booking.html" class="active">Booking</a>
+      <a href="faq.html">FAQ</a>
+      <a href="mailto:discover@taniti.gov?subject=Inquiry%20from%20Website">Contact</a>
+    </div>
+  </div>
+
+  <!-- booking form -->
+  <div class="main-content">
+    <div class="booking-form">
+      <h2>Book Your Taniti Experience</h2>
+      
+      <form action="#" method="post">
+        <label for="name">Full Name <span class="required">*</span></label>
+        <input type="text" id="name" name="name" required>
+      
+        <label for="email">Email Address <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required>
+      
+        <label for="phone">Phone Number (with country code) <span class="required">*</span></label>
+        <input type="tel" id="phone" name="phone" placeholder="+1 123 456 789" required>
+
+      
+        <label for="date">Booking Date <span class="required">*</span></label>
+        <input type="date" id="date" name="date" required>
+      
+        <label for="reason">Reason for Booking <span class="required">*</span></label>
+        <select id="reason" name="reason" required>
+          <option value="" selected disabled>Select a booking type...</option>
+          <option value="accommodation">Accommodation Booking</option>
+          <option value="transport">Transport Help</option>
+          <option value="tour">Tour Booking</option>
+          <option value="tour">Dining Reservation</option>
+          <option value="other">Other (please specify below)</option>
+        </select>
+      
+        <label for="details">Additional Details</label>
+        <textarea id="details" name="details" rows="4" placeholder="Please provide any additional information or requests."></textarea>
+      
+        <button type="submit">Submit Booking Request</button>
+      </form>
+      
+    </div>
+  </div>
+
+  <!--Footer-->
+  <div class="footer">
+    © 2025 Discover Taniti - All rights reserved.   
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
