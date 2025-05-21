@@ -1,36 +1,46 @@
 
 // Nav button
 document.addEventListener('DOMContentLoaded', function() {
-    // get navigation elements
     const toggle = document.querySelector('.navbar-toggle');
     const links = document.querySelector('.navbar-links');
-    
-    // toggle mobile menu when NAV button is clicked
-    toggle.addEventListener('click', function() {
-      links.classList.toggle('active');
-    });
-    
-    // close mobile menu when a link is clicked
+
+    // Check if elements exist
+    if (!toggle || !links) {
+        console.error('Could not find .navbar-toggle or .navbar-links');
+        return;
+    }
+
+    function toggleMenu() {
+        links.classList.toggle('active');
+    }
+
+    toggle.addEventListener('click', toggleMenu);
+    toggle.addEventListener('touchend', toggleMenu);
+
     const navLinks = document.querySelectorAll('.navbar-links a');
     navLinks.forEach(function(link) {
-      link.addEventListener('click', function() {
-        if (window.innerWidth <= 700) {
-          links.classList.remove('active');
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 700) {
+                links.classList.remove('active');
+            }
+        });
+        link.addEventListener('touchend', function() {
+            if (window.innerWidth <= 700) {
+                links.classList.remove('active');
+            }
+        });
+    });
+
+    // closes mobile menu when clicking outside of it
+    document.addEventListener('click', function(event) {
+        const isClickInsideNavbar = toggle.contains(event.target) || 
+                                   links.contains(event.target);
+        if (!isClickInsideNavbar && links.classList.contains('active')) {
+            links.classList.remove('active');
         }
-      });
     });
 });
-    
-    // close mobile menu when clicking outside of it
-    document.addEventListener('click', function(event) {
-      const isClickInsideNavbar = toggle.contains(event.target) || 
-                                 links.contains(event.target);
-      
-      if (!isClickInsideNavbar && links.classList.contains('active')) {
-        links.classList.remove('active');
-      }
-    });
-  });
+
 
   // thank you message for booking
     document.addEventListener('DOMContentLoaded', function() {
