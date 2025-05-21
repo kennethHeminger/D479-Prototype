@@ -1,2 +1,4 @@
 # D479-Prototype
-D479 task 1 Prototype
+This project is an interactive, responsive tourism website for the fictional island of Taniti, developed as part of the D479 User Experience Design course at WGU. The goal is to create a user-friendly prototype that showcases key features such as attractions, activities, accommodations, transport options, and a booking system, all while adhering to best practices in web design and usability.
+The website is built using HTML, CSS, and JavaScript to ensure full customization and hands-on learning. It includes wireframes, mobile-friendly navigation, a booking form, and clear information architecture—demonstrating the process of designing, testing, and refining a digital product based on user feedback and course requirements.
+This project highlights skills in user research, wireframing, prototyping, usability testing, and responsive web development. It serves as a practical example of the user experience design process from initial concept to a functional, accessible prototype.
