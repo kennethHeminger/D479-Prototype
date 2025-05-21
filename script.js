@@ -1,5 +1,5 @@
 
-
+// Nav button
 document.addEventListener('DOMContentLoaded', function() {
     // get navigation elements
     const toggle = document.querySelector('.navbar-toggle');
@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     });
+});
     
     // close mobile menu when clicking outside of it
     document.addEventListener('click', function(event) {
